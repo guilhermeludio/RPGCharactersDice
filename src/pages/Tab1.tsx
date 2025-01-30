@@ -82,10 +82,10 @@ const Tab1: React.FC = () => {
               {arrayListRPGChars.map((name, index) => (
                 <IonItem key={index} className="centered-item">
 
-                  <span style={{ width: "60px" }}> <h3>{jsonData[name]?.counter}</h3> </span>
+                  <span style={{ width: "60px" }}> <h3>{jsonData[name]?.counter ?? 0}</h3> </span>
 
                   <IonThumbnail slot="start">
-                    <img alt={name} src={`./public/${name}.png`} />
+                    <img alt={name} src={`./${name}.png`} />
                   </IonThumbnail>
 
                   {/* <IonLabel >Galdrin</IonLabel> */}
@@ -105,7 +105,7 @@ const Tab1: React.FC = () => {
                       <div className='flex'>
 
                         <button className="custom-button-dados d20" onClick={() => handleAction(name, "luck", "add")}>
-                          <img alt="d20" src="./public/d20.png" />
+                          <img alt="d20" src="./d20.png" />
                         </button>
                         <span onClick={() => handleAction(name, "luck", "remove")} style={{ display: "flex", alignItems: "center" }}><IonIcon icon={removeCircle} style={{ fontSize: "20px" }} /></span>
 
@@ -115,7 +115,7 @@ const Tab1: React.FC = () => {
                       <div className='flex'>
 
                         <button className="custom-button-dados d1" onClick={() => handleAction(name, "bad_luck", "add")}>
-                          <img alt="d1" src="./public/d1.png" />
+                          <img alt="d1" src="./d1.png" />
                         </button>
                         <span onClick={() => handleAction(name, "bad_luck", "remove")} style={{ display: "flex", alignItems: "center" }}><IonIcon icon={removeCircle} style={{ fontSize: "20px" }} /></span>
 
