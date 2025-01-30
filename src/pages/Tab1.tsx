@@ -36,12 +36,11 @@ const Tab1: React.FC = () => {
       action == "add" ? jsonData[name].counter++ : jsonData[name].counter--;
     }
     saveData();
-    window.location.reload();
   };
 
   const saveData = async () => {
     try {
-      const response = await fetch("http://localhost:3001/data", {
+      const response = await fetch("https://rpgcharactersdice.onrender.com/data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,8 +48,11 @@ const Tab1: React.FC = () => {
         body: JSON.stringify(jsonData),
       });
 
+      console.log(response)
+
       if (response.ok) {
         console.log("JSON salvo no servidor!");
+        window.location.reload();
       } else {
         console.error("Erro ao salvar o JSON.");
       }

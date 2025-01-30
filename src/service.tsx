@@ -1,7 +1,7 @@
 
 export const getData = async () => {
     try {
-        const response = await fetch("http://localhost:3001/data");
+        const response = await fetch("https://rpgcharactersdice.onrender.com/data");
         if (response.ok) {
             const result = await response.json();
             return result;
