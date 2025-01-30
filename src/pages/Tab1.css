@@ -1,0 +1,73 @@
+ion-item {
+    --padding-start: 0;
+}
+
+ion-thumbnail {
+    min-width: 5rem;    
+    min-height: 5rem;
+    img {
+        max-width: 5rem;    
+        min-width: 5rem;
+    }
+}
+
+.flex{
+    display: flex;
+}
+
+.centered-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    /* Se precisar centralizar também verticalmente */
+}
+
+
+.control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: auto;
+}
+
+.custom-button{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-right: 1px solid white;
+    height: 60px;
+}
+
+.custom-button-galdrin {
+    color:#d1f7f8;
+}
+
+
+.custom-button-remove {
+    color: rgb(255, 87, 87);
+}
+
+
+.custom-button-dados {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+ 
+    height: 60px;
+    margin-right: 25px;
+}
+
+.d20{
+    color:#d1f7f8;
+}
+
+.control-dados{
+    display: flex;
+
+}
